@@ -1,0 +1,156 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Page background and centering */
+body {
+    background: #f2f4f8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+/* Main container */
+.container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input area */
+.input-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Task input */
+input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Add button */
+button {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Task list */
+ul {
+    list-style: none;
+}
+
+/* Task item */
+li {
+    background: #f9fafc;
+    padding: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px;
+}
+
+/* Task text */
+li span {
+    cursor: pointer;
+    word-break: break-word;
+    max-width: 65%;
+}
+
+/* Completed task */
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Action buttons */
+.actions button {
+    margin-left: 5px;
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+/* Edit button */
+.edit {
+    background: #ffc107;
+    color: #000;
+}
+
+/* Delete button */
+.delete {
+    background: #dc3545;
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+
+    li span {
+        max-width: 60%;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 18px;
+    }
+
+    .input-box {
+        flex-direction: column;
+    }
+
+    input,
+    button {
+        width: 100%;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    li span {
+        max-width: 100%;
+    }
+
+    .actions {
+        align-self: flex-end;
+    }
+}
